@@ -1,0 +1,21 @@
+# Ohmyzsh config
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="duellj"
+CASE_SENSITIVE="true"
+plugins=(git)
+SWAPLOC="$HOME/.local/share/nvim/swap"
+
+# Exports
+source $DOTFILES/zsh/scripts/export.sh
+
+# Aliases
+source $DOTFILES/zsh/scripts/alias.sh
+
+# Functions
+source $DOTFILES/zsh/scripts/func.sh
+
+# Ohmyzsh
+source $ZSH/oh-my-zsh.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/nomad nomad
